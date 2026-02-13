@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+/* Bulb Hanging */
+.bulb-container {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.thread {
+    width: 3px;
+    height: 180px;
+    background: white;
+}
+
+.bulb {
+    font-size: 70px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    filter: brightness(40%);
+}
+
+.bulb.on {
+    filter: drop-shadow(0 0 40px gold);
+    transform: scale(1.1);
+}
+
+/* Hidden content initially */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.5s ease;
+}
+
+/* Main Card */
+.container {
+    position: relative;
+    text-align: center;
+    background: rgba(255,255,255,0.08);
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    z-index: 2;
+}
+
+/* Buttons inside wrapper */
+.btn-wrapper {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: auto;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+}
+
+#yesBtn {
+    background: #ff4b6e;
+    color: white;
+    left: 20px;
+}
+
+#noBtn {
+    background: #444;
+    color: white;
+    right: 20px;
+}
+
+/* Glow background when ON */
+.light-on {
+    background: radial-gradient(circle at center, #2c003e 0%, #000 70%);
+}
